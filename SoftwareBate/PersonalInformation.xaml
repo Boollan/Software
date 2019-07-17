@@ -1,0 +1,42 @@
+﻿<Window x:Class="cute_debug.PersonalInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cute_debug"
+        mc:Ignorable="d"
+        Title="个人资料" Height="448.743" Width="338.08" Background="White" Icon="image/icon.png" Closed="Window_Closed" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Loaded="Window_Loaded">
+    <Grid HorizontalAlignment="Right" Width="330">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="142*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="名称:" Margin="98,31,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="39"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="142,31,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF4D7FC7" BorderThickness="0,0,0,1" Foreground="White" IsEnabled="False"/>
+        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="86,59,0,0" Grid.Row="2" Width="51" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="mail" HorizontalAlignment="Left" Height="23" Margin="142,59,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF4D7FC7" BorderThickness="0,0,0,1" Foreground="White" IsEnabled="False"/>
+        <Label  Grid.Column="0" Content="个人资料" FontFamily="微软雅黑" Background="#FF4D7FC7" Foreground="White" HorizontalContentAlignment="Center" FontSize="14" Grid.RowSpan="2" Margin="0,99,0,1"/>
+        <Label  Content="生日:" HorizontalAlignment="Right" Margin="0,87,193,0" Grid.Row="2" Width="39" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="birthday" HorizontalAlignment="Right" Height="23" Margin="0,87,68,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF4D7FC7" BorderThickness="0,0,0,1" Foreground="White" IsEnabled="False"/>
+        <Label Content="专业:" HorizontalAlignment="Left" Margin="98,115,0,0" Grid.Row="2" Width="39" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="por" HorizontalAlignment="Left" Height="23" Margin="142,115,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF4D7FC7" BorderThickness="0,0,0,1" Foreground="White" IsEnabled="False"/>
+        <Label Content="国籍:" Margin="98,143,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" HorizontalAlignment="Left" Width="39" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="Country" HorizontalAlignment="Left" Height="23" Margin="142,143,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF4D7FC7" BorderThickness="0,0,0,1" Foreground="White" IsEnabled="False"/>
+        <Label Content="联系电话:" HorizontalAlignment="Left" Margin="76,171,0,0" Grid.Row="2" Width="61" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Right" Height="23" Margin="0,171,68,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF4D7FC7" BorderThickness="0,0,0,1" Foreground="White" IsEnabled="False"/>
+        <Button x:Name="edit" Content="编辑" HorizontalAlignment="Left" Margin="179,208,0,0" Grid.Row="2" VerticalAlignment="Top" Width="83" BorderThickness="0" Height="24" Background="#FF4D7FC7" Foreground="White" Click="Button_Click_1"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="86,208,0,0" Grid.Row="2" VerticalAlignment="Top" Width="83" BorderThickness="0" Height="24" Background="#FF4D7FC7" Foreground="White" Click="Button_Click"/>
+        <Image Source="image/bakce_1.png"  Height="100" VerticalAlignment="Top" Stretch="UniformToFill"/>
+        <Label x:Name="lable_inf_name" Content="" Margin="142,31,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" BorderBrush="Black" IsEnabled="False"/>
+        <Label x:Name="lable_inf_mail" Content="" Margin="142,59,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" BorderBrush="Black" IsEnabled="False"/>
+        <Label x:Name="lable_inf_birthday" Content="" Margin="142,87,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" BorderBrush="Black" IsEnabled="False"/>
+        <Label x:Name="lable_inf_pro" Content="" Margin="142,115,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" BorderBrush="Black" IsEnabled="False"/>
+        <Label x:Name="lable_inf_countries" Content="" Margin="142,143,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" BorderBrush="Black" IsEnabled="False"/>
+        <Label x:Name="lable_inf_phone" Content="" Margin="142,171,0,0" Grid.Row="2" Background="#FF4D7FC7" Foreground="White" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" BorderBrush="Black" IsEnabled="False"/>
+
+    </Grid>
+</Window>
+
+    

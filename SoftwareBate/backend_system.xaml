@@ -1,0 +1,55 @@
+﻿<Window x:Name="back_system" x:Class="cute_debug.backend_system"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cute_debug"
+        mc:Ignorable="d"
+        Title="后台系统" Icon="image/icon.png" Height="564.36" Width="800" Closed="Window_Closed" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="479*"/>
+        </Grid.RowDefinitions>
+        <Canvas HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="792" Background="#FF1E1E1E">
+            <Button Content="用户权限" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="10" Canvas.Top="10" Background="#FF3B3F47" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Click="Button_Click_4"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47" Canvas.Left="111" Canvas.Top="10"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="212" Canvas.Top="10" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="313" Canvas.Top="10" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="411" Canvas.Top="10" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47"/>
+            <Button Content="Buttno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="506" Canvas.Top="10" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="602" Canvas.Top="10" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47"/>
+            <Button Content="返回菜单" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="34" Canvas.Left="700" Canvas.Top="10" Foreground="#FF2A6C97" BorderBrush="#FF2A6C97" Background="#FF3B3F47" Click="Button_Click"/>
+        </Canvas>
+        <Grid Name="Authority_allocation" HorizontalAlignment="Left" Height="479" Grid.Row="1" VerticalAlignment="Top" Width="792" Background="White">
+            <ComboBox x:Name="comb_system1" HorizontalAlignment="Left" Margin="289,2,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Comb_system1_SelectionChanged">
+                <ComboBoxItem Content="普通用户权限0" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="最低管理权限1" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="管理用户权限2" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="管理用户权限3" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="管理用户权限4" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="管理用户权限5" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="root管理权限6" HorizontalAlignment="Left" Width="118"/>
+
+
+
+
+
+            </ComboBox>
+            <Label Content="权限更改" HorizontalAlignment="Left" Margin="226,1,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="792" Background="#FF1E1E1E"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="171" Margin="22,63,0,0" RadiusY="23.512" RadiusX="23.512" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Label Content="卡密权限" HorizontalAlignment="Left" Margin="94,76,0,0" VerticalAlignment="Top" Width="59"/>
+            <CheckBox x:Name="c_kami_sytem" Content="卡密功能开启" HorizontalAlignment="Left" Margin="77,116,0,0" VerticalAlignment="Top"/>
+            <Button Content="锁定" HorizontalAlignment="Left" Margin="422,4,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="171" Margin="282,63,0,0" RadiusY="23.512" RadiusX="23.512" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Label Content="后台系统" HorizontalAlignment="Left" Margin="350,76,0,0" VerticalAlignment="Top" Width="59"/>
+            <CheckBox x:Name="c_back_system" Content="后台功能开启" HorizontalAlignment="Left" Margin="333,116,0,0" VerticalAlignment="Top"/>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="171" Margin="547,63,0,0" RadiusY="23.512" RadiusX="23.512" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+            <Label Content="数据库管理" HorizontalAlignment="Left" Margin="621,76,0,0" VerticalAlignment="Top" Width="59"/>
+            <CheckBox x:Name="c_sql_system" Content="数据库功能开启" HorizontalAlignment="Left" Margin="604,116,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

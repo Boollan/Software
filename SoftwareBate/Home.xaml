@@ -1,0 +1,77 @@
+﻿<Window x:Name="HOME" x:Class="cute_debug.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cute_debug"
+        mc:Ignorable="d"
+        Title="菜单" Height="450" Width="800" MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800" Background="Black" Icon="image/icon.png" Closed="HOME_Closed" WindowStartupLocation="CenterScreen" Loaded="HOME_Loaded"  >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="331"/>
+            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="358*"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Background="#FF252526" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <Button Content="个人资料" FontFamily="微软雅黑" FontSize="11" Foreground="#FF569CD6" Background="#FF252526" Canvas.Left="0" Canvas.Top="0" Width="110" Height="40" Click="Button_Click"/>
+            <Button Content="账号系统" FontFamily="微软雅黑" FontSize="11" Canvas.Left="110" Canvas.Top="0" Width="118" Height="40" Background="#FF252526" Foreground="#FF569CD6" Click="Button_Click_1"/>
+            <Button Content="扭蛋游戏" FontFamily="微软雅黑" FontSize="11" Canvas.Left="228" Canvas.Top="0" Width="110" Height="40" Background="#FF252526" Foreground="#FF569CD6"/>
+            <Button x:Name="kami_system" Content="卡密系统" FontFamily="微软雅黑" FontSize="11" Canvas.Left="338" Canvas.Top="0" Width="118" Height="40" Background="#FF252526" Foreground="#FF569CD6" Click="Button_Click_2"/>
+            <Button Content="玩家等级系统" FontFamily="微软雅黑" FontSize="11" Canvas.Left="456" Canvas.Top="0" Width="105" Height="40" Background="#FF252526" Foreground="#FF569CD6"/>
+            <Button x:Name="back_system" Content="后台系统" FontFamily="微软雅黑" FontSize="11" Canvas.Left="561" Canvas.Top="0" Width="123" Height="40" Background="#FF252526" Foreground="#FF569CD6" Click="Button_Click_3"/>
+            <Button x:Name="sql_system" Content="数据管理" FontFamily="微软雅黑" FontSize="11" Canvas.Left="684" Canvas.Top="0" Width="108" Height="40" Background="#FF252526" Foreground="#FF569CD6"/>
+            <Button Content="个人资料" FontFamily="微软雅黑" FontSize="11" Foreground="#FF569CD6" Background="#FF252526" Canvas.Left="0" Canvas.Top="0" Width="110" Height="40" Click="Button_Click"/>
+        </Canvas>
+        <Canvas Grid.Column="1" Background="White" Grid.Row="2">
+            <Label  Content="账号:" FontSize="14" Canvas.Left="27" Canvas.Top="75" RenderTransformOrigin="1.976,0.714"/>
+            <Label Content="等级:" FontSize="14" Canvas.Left="27" Canvas.Top="108" RenderTransformOrigin="0.463,-2.143"/>
+            <Label Content="游戏币:" FontSize="14" Canvas.Left="13" Canvas.Top="143"/>
+            <Label Content="管理员级别:" FontSize="14" Canvas.Left="27" Canvas.Top="266" Visibility="Hidden"/>
+            <Label Content="5最高,0最低" Foreground="Red"  FontSize="14" Canvas.Left="99" Canvas.Top="299" Visibility="Hidden"/>
+            <Label Content="VIP:" FontSize="14" Canvas.Left="27" Canvas.Top="181"/>
+            <Label Content="级" FontSize="14" Canvas.Left="94" Canvas.Top="183"/>
+            <Button Content="注销账号" FontFamily="微软雅黑" FontSize="11" Foreground="#FF569CD6" Background="#FF252526" Canvas.Top="315" Width="92" Height="34" Click="Button_Click_4" Canvas.Left="1" />
+        </Canvas>
+        <Canvas Grid.Column="2" Background="White" Grid.Row="2">
+            <TextBox x:Name="textbox_user" IsEnabled="False" Height="23" Canvas.Left="-162" TextWrapping="Wrap" Text="" Canvas.Top="74" Width="100"/>
+            <TextBox x:Name="textbox_gred" IsEnabled="False"  Height="23" Canvas.Left="-162" TextWrapping="Wrap" Text="" Canvas.Top="111" Width="38"/>
+            <TextBox x:Name="textbox_GM" IsEnabled="False"  Height="23" Canvas.Left="-113" TextWrapping="Wrap" Text="" Canvas.Top="267" Width="45" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.477"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="textbox_currency" IsEnabled="False"  Height="23" Canvas.Left="-162" TextWrapping="Wrap" Text="" Canvas.Top="148" Width="68"/>
+            <Label Content="官方公告" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="23" FontFamily="微软雅黑" Width="184" Height="40" FontSize="22" FontWeight="Bold"/>
+            <Label Content="2018年2月2日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="69" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="2018年2月20日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="97" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="2018年2月28日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="120" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="2018年3月18日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="148" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="2018年4月15日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="176" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="2018年5月20日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="204" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="2018年6月4日服务器维护" HorizontalContentAlignment="Center"  Canvas.Left="73" Canvas.Top="232" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="官方邮箱：wyzaoz@163.com" HorizontalContentAlignment="Center"  Canvas.Left="58" Canvas.Top="285" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <Label Content="官方客服：2769772980" HorizontalContentAlignment="Center"  Canvas.Left="58" Canvas.Top="308" FontFamily="微软雅黑" Width="184" Height="23" FontSize="11" FontWeight="Bold"/>
+            <GroupBox Header="——————————————————————————————" Height="19" Canvas.Top="261" Width="341" Canvas.Left="-10"/>
+            <TextBox x:Name="textbox_vip" IsEnabled="False"  Height="23" Canvas.Left="-162" TextWrapping="Wrap" Text="" Canvas.Top="186" Width="28" Foreground="Red"/>
+        </Canvas>
+        <Canvas Grid.Column="3" Background="White" Grid.Row="2">
+            <Image Height="359" Width="231" Source="image/icon.png"/>
+        </Canvas>
+        <Canvas Grid.Row="1" Background="#FFFFFF" Grid.ColumnSpan="4">
+            <Label Grid.Row="1"  HorizontalContentAlignment="Center" Content="请谨慎操作道具物品数据 否则概不负责" Canvas.Top="0" Height="23" Width="790" AutomationProperties.IsOffscreenBehavior="Onscreen"/>
+        </Canvas>
+
+    </Grid>
+</Window>

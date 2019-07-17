@@ -1,0 +1,81 @@
+﻿<Window x:Class="cute_debug.account"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cute_debug"
+        mc:Ignorable="d"
+        Title="账号系统" Icon="image\icon.png" Height="393.408" Width="561.765" Background="White" Closed="Window_Closed" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="227*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="160*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="109" Grid.ColumnSpan="2"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="42" Grid.Column="1" Background="#FF5F93DE" Foreground="White"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="86,0,0,0" VerticalAlignment="Top" Width="88" Height="42" Grid.Column="1" Background="#FF5F93DE" Foreground="White"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="174,0,0,0" VerticalAlignment="Top" Width="88" Height="42" Grid.Column="1" Background="#FF5F93DE" Foreground="White"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="262,0,0,0" VerticalAlignment="Top" Width="97" Height="42" Grid.Column="1" Background="#FF5F93DE" Foreground="White"/>
+
+        <Image HorizontalAlignment="Left" Source="image\account_logo.png" Height="43" VerticalAlignment="Top" Width="99" Margin="0,-1,0,0"/>
+        <Menu HorizontalAlignment="Left" Height="321" Grid.Row="1" VerticalAlignment="Top" Width="99" Background="White">
+            <MenuItem Header="账号密码" Foreground="Red" Height="25" Width="99" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="Black" Click="MenuItem_Click"/>
+            <MenuItem Header="账号充值" Foreground="Violet" Height="24" Width="99" BorderBrush="Black" Click="MenuItem_Click_1"/>
+            <MenuItem Header="成为VIP会员" Foreground="Violet" Height="24" Width="99" BorderBrush="Black" Click="MenuItem_Click_2"/>
+
+        </Menu>
+        <Button Content="返回菜单" HorizontalAlignment="Left" Margin="359,1,0,0" VerticalAlignment="Top" Width="92" Height="40" Grid.Column="1" Background="#FF5F93DE" Foreground="White" Click="Button_Click_2"/>
+        <Grid x:Name="Grid_Password_change" Margin="5,5,-1,0" Grid.Row="1" Grid.Column="1" IsEnabled="False" Visibility="Hidden">
+            <TextBox x:Name="textbox_account_username" HorizontalAlignment="Left" Height="23" Margin="150,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" IsEnabled="False"/>
+            <PasswordBox x:Name="textbox_account_Thepassword" HorizontalAlignment="Left" Height="23" Margin="150,67,0,0"  VerticalAlignment="Top" Width="120" Background="White"/>
+            <PasswordBox x:Name="textbox_account_password" HorizontalAlignment="Left" Height="23" Margin="150,95,0,0" VerticalAlignment="Top" Width="120" Background="White"/>
+            <PasswordBox x:Name="textbox_account_Confirmpassword" HorizontalAlignment="Left" Height="23" Margin="150,123,0,0"  VerticalAlignment="Top" Width="120" Background="White"/>
+            <Label Content="账号：" HorizontalAlignment="Left" Margin="99,39,0,0" VerticalAlignment="Top" Background="White" Foreground="#FF475AD3" RenderTransformOrigin="0.522,0.48"/>
+            <Label Content="旧密码：" HorizontalAlignment="Left" Margin="87,71,0,0" VerticalAlignment="Top" Background="White" Foreground="#FF475AD3"/>
+            <Label Content="新密码：" HorizontalAlignment="Left" Margin="87,101,0,0" VerticalAlignment="Top" Background="White" Foreground="#FF475AD3"/>
+            <Label Content="确认新密码：" HorizontalAlignment="Left" Margin="63,129,0,0" VerticalAlignment="Top" Background="White" Foreground="#FF475AD3"/>
+            <Button x:Name="button_Modifythe" Content="确认修改" HorizontalAlignment="Left" Margin="151,152,0,0" VerticalAlignment="Top" Width="117"  Height="26" Background="#FF00A1D6" BorderThickness="0" Click="Button_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.565"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+        <Grid x:Name="Grid_Play" HorizontalAlignment="Left" Height="315" Margin="0,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="453" Grid.Column="1" Visibility="Hidden">
+            <TextBox x:Name="textbox_paly_username" HorizontalAlignment="Left" Height="23" Margin="153,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" IsEnabled="False"/>
+            <TextBox x:Name="textbox_paly_currency" HorizontalAlignment="Left" Height="23" Margin="153,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" IsEnabled="False"/>
+            <TextBox x:Name="textbox_cdk" HorizontalAlignment="Left" Height="23" Margin="153,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Background="White"/>
+            <Label Content="账号：" HorizontalAlignment="Left" Margin="107,57,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <Label Content="余额：" HorizontalAlignment="Left" Margin="107,89,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <Label Content="充值CDK：" HorizontalAlignment="Left" Margin="82,123,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <Button Content="确认充值" HorizontalAlignment="Left" Margin="153,151,0,0" VerticalAlignment="Top" Width="120" Height="27" Background="#FF00A1D6" Foreground="White" Click="Button_Click_1"/>
+        </Grid>
+        <Grid x:Name="Grid_vip" HorizontalAlignment="Left" Height="321" Grid.Row="1" VerticalAlignment="Top" Width="453" Margin="99,1,0,-1" Grid.ColumnSpan="2">
+            <Label Content="账号：" HorizontalAlignment="Left" Margin="107,57,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <TextBox x:Name="textbox_vip_username" HorizontalAlignment="Left" Height="23" Margin="153,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="White" IsEnabled="False"/>
+            <Label Content="vip：" HorizontalAlignment="Left" Margin="107,95,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <TextBox x:Name="textbox_vip_level" HorizontalAlignment="Left" Height="23" Margin="153,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Background="White" IsEnabled="False"/>
+            <Label Content="余额：" HorizontalAlignment="Left" Margin="107,133,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <TextBox x:Name="textbox_vip_money" HorizontalAlignment="Left" Height="23" Margin="153,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Background="White" IsEnabled="False"/>
+            <Button Content="确认开通" HorizontalAlignment="Left" Margin="153,209,0,0" VerticalAlignment="Top" Width="120" Height="27" Background="#FF00A1D6" Foreground="White" Click="Button_Click_3" />
+            <Label Content="开通：" HorizontalAlignment="Left" Margin="107,168,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+            <ComboBox x:Name="combobox_vip_time" HorizontalAlignment="Left" Margin="153,172,0,0" VerticalAlignment="Top" Width="120" Cursor="" SelectedIndex="0">
+                <ComboBoxItem Foreground="Black" Content="1个月/20元" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Foreground="#FF4CAA29" Content="3个月/60元" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Foreground="#FFAA5151" Content="6个月/150元" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Foreground="#FF420F8B" Content="9个月/170元" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Foreground="Red" Content="12个月/198元" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Foreground="Orange" FontSize="11" Content="捐助：24个月/240元" HorizontalAlignment="Left" Width="118"/>
+            </ComboBox>
+            <Label Content="开通：" HorizontalAlignment="Left" Margin="107,168,0,0" VerticalAlignment="Top" Foreground="#FF7AC1FF"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="cute_debug.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:cute_debug"
+             StartupUri="land.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
